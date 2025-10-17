@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-lv="BMW Stāsti" data-lang-ru="Истории BMW">BMW Stāsti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 id="logo" data-lang-lv="BMW Stāsti" data-lang-ru="Истории BMW" class="fade-in">BMW Stāsti</h1>
+    <button id="lang-toggle" onclick="toggleLang()" class="lang-toggle">LAT</button>
+  </header>
+  <nav class="navigation fade-in">
+    <button id="cars-nav" onclick="showSection('cars')" data-lang-lv="Mašīnas" data-lang-ru="Машины" class="nav-btn active">Mašīnas</button>
+    <button id="parts-nav" onclick="showSection('parts')" data-lang-lv="Rezerves daļas" data-lang-ru="Запчасти" class="nav-btn">Rezerves daļas</button>
+  </nav>
+  <main>
+    <!-- Секция машин -->
+    <section id="cars-section" class="section fade-in">
+      <h2 data-lang-lv="BMW Modeļi" data-lang-ru="Модели BMW">BMW Modeļi</h2>
+      <ul id="cars"></ul>
+      <p id="error-msg-cars" style="display:none; color:red; text-align:center;">Kļūda ielādē datu. Pārbaudiet konsoli.</p>
+      <section id="car-details" class="slide-in hidden">
+        <h2 id="detail-title"></h2>
+        <img id="detail-image" src="" alt="">
+        <p id="detail-desc"></p>
+        <button onclick="hideDetails()" data-lang-lv="Aizvērt" data-lang-ru="Закрыть">Aizvērt</button>
+      </section>
+    </section>
+    <!-- Секция запчастей -->
+    <section id="parts-section" class="section hidden fade-in">
+      <h2 data-lang-lv="Rezerves daļas" data-lang-ru="Запчасти">Rezerves daļas</h2>
+      <ul id="parts"></ul>
+      <p id="error-msg-parts" style="display:none; color:red; text-align:center;">Kļūda ielādē datu. Pārbaudiet konsoli.</p>
+      <section id="part-details" class="slide-in hidden">
+        <h2 id="part-detail-title"></h2>
+        <img id="part-detail-image" src="" alt="">
+        <p id="part-detail-desc"></p>
+        <button onclick="hidePartDetails()" data-lang-lv="Aizvērt" data-lang-ru="Закрыть">Aizvērt</button>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
